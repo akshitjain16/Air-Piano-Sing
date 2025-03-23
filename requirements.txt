@@ -1,6 +1,6 @@
 opencv-python
+opencv-contrib-python
 cvzone
 pygame
 numpy
 mediapipe
-threading

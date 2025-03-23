@@ -36,6 +36,7 @@ SUSTAIN_TIME = 2.0
 
 # Track Previous States to Stop Chords
 prev_states = {hand: {finger: 0 for finger in chords[hand]} for hand in chords}
+release_timestamps = {}
 
 # 🎵 Function to Play a Chord
 def play_chord(chord_notes):
@@ -55,6 +56,7 @@ while True:
         continue
 
     hands, img = detector.findHands(img, draw=True)
+    current_time = time.time()
 
     if hands:
         for hand in hands:
